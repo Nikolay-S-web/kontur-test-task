@@ -1,0 +1,36 @@
+{
+    "name": "kontur-test-task",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "author": "N. Senchenko",
+    "scripts": {
+        "dev": "vite",
+        "devH": "vite --host",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "@spiriit/vite-plugin-svg-spritemap": "^4.0.1",
+        "sass": "^1.86.3",
+        "sass-embedded": "^1.86.3",
+        "vite": "^6.3.1",
+        "vite-plugin-image-presets": "^0.3.4"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions"
+    ],
+    "dependencies": {
+        "@sentry/vite-plugin": "^3.3.1",
+        "@vitejs/plugin-legacy": "^6.1.0",
+        "autoprefixer": "^10.4.21",
+        "postcss-pxtorem": "^6.1.0",
+        "reset-css": "^5.0.2",
+        "swiper": "^11.2.6",
+        "vite-plugin-gh-pages": "^1.0.1",
+        "vite-plugin-html": "^3.2.2",
+        "vite-plugin-minify": "^2.1.0",
+        "vite-plugin-purgecss": "^0.2.13"
+    }
+}

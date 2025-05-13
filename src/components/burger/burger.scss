@@ -1,0 +1,68 @@
+.burger {
+    --transitionDuration: 0.5s;
+    --crossColor: #bcbcbc;
+
+    background-color: unset;
+    border: unset;
+    padding: 0;
+    // padding: 5%;
+    // aspect-ratio: 1;
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        row-gap: 20%;
+        perspective: 1px;
+    }
+
+    &__line {
+        width: 100%;
+        height: 100%;
+    }
+
+    &-line {
+        border-radius: 10px;
+        background-color: var(--buttonColor);
+        transition: var(--transitionDuration);
+    }
+
+    &-cross {
+        position: relative;
+        &__line {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            background-color: var(--buttonColor);
+            &--first,
+            &--second {
+                z-index: 1;
+                transition: var(--transitionDuration);
+            }
+        }
+    }
+
+    &.active {
+        .burger {
+            &-line {
+                transform: translateZ(-1px);
+                opacity: 0;
+            }
+            &-cross {
+                &__line {
+                    border-radius: unset;
+                    &--first {
+                        transform: rotate(45deg) scaleX(1.2);
+                        background-color: var(--crossColor);
+                    }
+                    &--second {
+                        transform: rotate(-45deg) scaleX(1.2);
+                        background-color: var(--crossColor);
+                    }
+                }
+            }
+        }
+    }
+}

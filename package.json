@@ -11,7 +11,7 @@
         "preview": "vite preview"
     },
     "devDependencies": {
-        "@spiriit/vite-plugin-svg-spritemap": "^4.0.1",
+        "@spiriit/vite-plugin-svg-spritemap": "^4.1.0",
         "sass": "^1.86.3",
         "sass-embedded": "^1.86.3",
         "vite": "^6.3.1",

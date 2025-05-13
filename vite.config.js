@@ -7,7 +7,7 @@ import legacy from '@vitejs/plugin-legacy';
 import { sentryVitePlugin } from '@sentry/vite-plugin';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import imagePresets, { widthPreset } from 'vite-plugin-image-presets';
-import { ghPages } from 'vite-plugin-gh-pages';
+// import { ghPages } from 'vite-plugin-gh-pages';
 
 export default defineConfig({
     build: {
@@ -21,7 +21,7 @@ export default defineConfig({
         sourcemap: true,
     },
     plugins: [
-        VitePluginSvgSpritemap('/src/assets/SVG/*.svg'),
+        VitePluginSvgSpritemap('./src/assets/svg/*.svg'),
         htmlPurge(),
         ViteMinifyPlugin(),
         legacy(),

@@ -3,12 +3,77 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/svg/CoDe-logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>kontur-test-task</title>
 </head>
 
-<body>
+<body id="index">
+
+    <header class="header">
+        <div class="header__wrapper">
+
+            <a href="./index.html" class="header__logo link">
+                <svg class="logo">
+                    <use xlink:href="/__spritemap#sprite-logo"></use>
+                </svg>
+            </a>
+
+            <nav class="header__navigation navigation">
+                <ul class="navigation__items">
+                    <li class="navigation__item"><a href="" class="link link--style_usual">Чему вы научитесь</a></li>
+                    <li class="navigation__item"><a href="" class="link link--style_usual">Процесс обучения</a></li>
+                    <li class="navigation__item"><a href="" class="link link--style_usual">Стоимость</a></li>
+                    <li class="navigation__item"><a href="" class="link link--style_usual">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <a href="tel:+7 (499) 348 93 96" class="header__call_link link link--style_phone">+7 (499) 348 93 96</a>
+
+            <button class="header__burger burger">
+                <div class="burger__wrapper">
+                    <div class="burger__line burger-line "></div>
+                    <div class="burger__line burger-cross">
+                        <div class="burger-cross__line burger-cross__line--first"></div>
+                        <div class="burger-cross__line burger-cross__line--second"></div>
+                    </div>
+                    <div class="burger__line burger-line"></div>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="promo swiper">
+            <div class="promo__wrapper swiper-wrapper">
+
+                <article class="promo__slide swiper-slide slide">
+                    <div class="slide__info slide-info">
+
+                        <h1 class="slide-info__title title title--slide">
+                            Школа <span class="title__accent">программирования</span> для тех, кому нужны реальные навыки, а не просто сертификат
+                        </h1>
+
+                        <div class="slide-info__call slide-info-call">
+                            <p class="slide-info-call__text text">
+                                Закажите звонок, и наш специалист свяжется с вами в ближайшее время
+                            </p>
+                            <button class="slide-info-call__button button button--call">
+                                Заказать звонок
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="slide__picture">
+
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
     <script type="module" src="/src/main.js"></script>
 </body>
 

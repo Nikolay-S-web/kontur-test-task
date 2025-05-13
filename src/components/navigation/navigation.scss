@@ -1,0 +1,38 @@
+.navigation {
+    --gap: 49px;
+    @media (max-width: 1024px) {
+        --gap: 30px;
+    }
+    @media (max-width: 864px) {
+        --gap: 15px;
+    }
+
+    @media (max-width: 768px) {
+        background-color: #fff;
+        opacity: 0;
+        transition-duration: 0.5s;
+        transition-property: opacity;
+        &__items {
+            margin-right: 86px;
+            margin-top: 80px;
+            margin-left: auto;
+        }
+
+        &.active {
+            opacity: 1;
+        }
+    }
+
+    &__items {
+        padding-inline: 10px;
+        display: flex;
+        width: fit-content;
+        gap: var(--gap);
+        @media (max-width: 768px) {
+            flex-direction: column;
+            justify-content: end;
+        }
+    }
+    &__item {
+    }
+}

@@ -1,0 +1,31 @@
+.text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: var(--primaryTextColor);
+
+    &--button {
+        line-height: 97%;
+        letter-spacing: -0.03em;
+        color: #fff;
+    }
+
+    &--about-item {
+        line-height: 115%;
+        text-align: center;
+    }
+
+    &--size_l {
+        font-size: 20px;
+    }
+    &--size_m {
+        font-size: 16px;
+        line-height: 144%;
+        @media (max-width: 768px) {
+            font-size: 12px;
+            line-height: 150%;
+        }
+    }
+    &--size_s {
+        font-size: 13px;
+    }
+}

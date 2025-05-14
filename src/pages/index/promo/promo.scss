@@ -1,0 +1,13 @@
+@use 'swiper/scss';
+.promo {
+    overflow: visible;
+    &__wrapper {
+        max-width: var(--contentMaxWidth);
+        overflow: visible;
+        align-items: center;
+    }
+    &__slide {
+        min-height: 394px;
+        // flex-grow: 1;
+    }
+}

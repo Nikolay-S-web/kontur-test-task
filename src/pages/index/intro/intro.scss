@@ -1,0 +1,21 @@
+.intro {
+    &__wrapper {
+        margin-top: 60px;
+        max-width: var(--contentMaxWidth);
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__about {
+        margin-top: 34px;
+    }
+
+    &-about {
+        display: flex;
+        gap: 26px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

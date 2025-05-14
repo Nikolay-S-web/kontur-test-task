@@ -1,0 +1,59 @@
+.about_item {
+    &__wrapper {
+        background-color: var(--aboutItemBgColor, #eaf2f5);
+        border-radius: 30px;
+        max-width: 270px;
+        max-height: 254px;
+        height: 100%;
+        padding-block: 35px;
+        padding-inline: 35px;
+        display: grid;
+        grid-template-rows: auto auto auto;
+        row-gap: 10px;
+        justify-items: center;
+    }
+
+    &__picture {
+        align-self: center;
+        width: var(--pictureWidth);
+        height: var(--pictureheight);
+
+        &--practice {
+            --pictureWidth: 58px;
+            --pictureheight: 58px;
+        }
+        &--methods {
+            --pictureWidth: 59px;
+            --pictureheight: 59px;
+        }
+        &--explanation {
+            --pictureWidth: 70px;
+            --pictureheight: 61px;
+        }
+        &--schedule {
+            --pictureWidth: 72px;
+            --pictureheight: 72px;
+        }
+        &--comunication {
+            --pictureWidth: 63px;
+            --pictureheight: 57px;
+        }
+        &--payment {
+            --pictureWidth: 59px;
+            --pictureheight: 59px;
+        }
+        &--refund {
+            --pictureWidth: 60px;
+            --pictureheight: 60px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__text {
+        text-wrap: balance;
+        margin-bottom: auto;
+    }
+}

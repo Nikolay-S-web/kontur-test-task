@@ -1,0 +1,32 @@
+.button {
+    --afterSize: 16px;
+
+    font-family: var(--fontFamily);
+    border: unset;
+    outline: unset;
+    cursor: pointer;
+
+    // width: 265px;
+    // height: 70px;
+    background-color: var(--buttonColor, #f15525);
+
+    &--call {
+        font-weight: 400;
+        padding-inline: 50px 40px;
+        padding-block: 25px;
+        border-radius: 82px;
+        &::after {
+            display: inline-block;
+            content: '';
+            width: 16px;
+            height: 16px;
+            margin-left: 12px;
+            background-image: url('/__spritemap#sprite-arrow-view');
+            background-repeat: no-repeat;
+            background-size: contain;
+            vertical-align: bottom;
+        }
+    }
+    &__text {
+    }
+}

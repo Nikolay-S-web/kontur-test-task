@@ -17,7 +17,7 @@
     --primaryTextColor: #22253b;
     --secondTextColor: #8e8e8e;
 
-    --aboutItemBgColor: #eaf2f5;
+    --altBgColor: #eaf2f5;
 
     --phoneLinkColor: #38bff2;
     --accentColor: #f15525;
@@ -37,7 +37,7 @@
         --inlineWrapperPadding: 20px;
     }
     @media (max-width: 425px) {
-        --inlineWrapperPadding: 12px;
+        --inlineWrapperPadding: 10px;
     }
 
     font-size: var(--rootFontSize);

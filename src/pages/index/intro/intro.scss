@@ -2,6 +2,9 @@
     &__wrapper {
         margin-top: 60px;
         max-width: var(--contentMaxWidth);
+        @media (max-width: 1024px) {
+            margin-top: 46px;
+        }
     }
 
     &__title {
@@ -10,12 +13,48 @@
 
     &__about {
         margin-top: 34px;
+        @media (max-width: 1024px) {
+            margin-top: 30px;
+        }
+        @media (max-width: 425px) {
+            margin-top: 26px;
+        }
     }
 
     &-about {
+        --gap: 26px;
+        --itemsPerRow: 4;
+        --gapsPerRow: calc(var(--itemsPerRow) - 1);
+        --itemWidth: calc((100% - calc(var(--gap) * var(--gapsPerRow))) / var(--itemsPerRow));
+
+        @media (max-width: 1024px) {
+            --gap: 20px;
+        }
+        @media (max-width: 864px) {
+            --itemsPerRow: 3;
+        }
+        @media (max-width: 640px) {
+            --itemsPerRow: 2;
+            --gap: 15px;
+        }
+        @media (max-width: 425px) {
+            --gap: 10px;
+        }
+
         display: flex;
-        gap: 26px;
+        gap: var(--gap);
         flex-wrap: wrap;
         justify-content: center;
+
+        &__item {
+            // max-width: 270px;
+            min-width: 145px;
+            width: var(--itemWidth);
+            @media (max-width: 640px) {
+                &:nth-child(odd):last-child {
+                    width: 100%;
+                }
+            }
+        }
     }
 }

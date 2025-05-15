@@ -1,0 +1,49 @@
+.learning_technique {
+    &__wrapper {
+        margin-top: 60px;
+        max-width: var(--contentMaxWidth);
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-auto-rows: auto;
+        grid-auto-flow: row dense;
+        align-items: stretch;
+        gap: 32px;
+        @media (max-width: 768px) {
+            margin-top: 48px;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+        @media (max-width: 425px) {
+            margin-top: 30px;
+            gap: 12px;
+        }
+    }
+
+    &__image {
+        // display: block;
+        border-radius: 40px;
+        max-width: 397px;
+        min-height: 234px;
+        object-fit: cover;
+
+        &:nth-of-type(even) {
+            grid-column-end: -1;
+        }
+        @media (max-width: 1280px) {
+            max-width: 320px;
+        }
+        @media (max-width: 768px) {
+            max-width: unset;
+            width: 100%;
+        }
+    }
+
+    &__description_box {
+        width: 100%;
+        // max-width: 730px;
+        // min-width: 397px;
+        @media (min-width: 768px) {
+            grid-column-end: span 2;
+        }
+    }
+}

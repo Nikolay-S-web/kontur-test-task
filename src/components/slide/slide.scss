@@ -65,7 +65,7 @@
             position: relative;
             padding-bottom: 24px;
             max-width: 638px;
-            @media (max-width: 768px) {
+            @media (max-width: 864px) {
                 max-width: 500px;
                 margin-inline: auto;
                 width: fit-content;
@@ -83,7 +83,7 @@
                 border: 1px solid #dedede;
                 width: 365px;
                 height: 0px;
-                @media (max-width: 768px) {
+                @media (max-width: 864px) {
                     // width: 100%;
                     width: calc(100% - 8px);
                 }

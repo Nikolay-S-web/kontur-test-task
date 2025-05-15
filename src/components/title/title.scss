@@ -38,12 +38,24 @@
     }
     &--size_m {
         font-size: 32px;
+        @media (max-width: 1024px) {
+            font-size: 24px;
+        }
+        @media (max-width: 425px) {
+            font-size: 20px;
+        }
     }
-
     &--size_s {
         font-weight: 400;
         font-size: 16px;
         line-height: 116%;
+        @media (max-width: 1024px) {
+            font-size: 13px;
+        }
+        @media (max-width: 425px) {
+            font-size: 12px;
+            line-height: 100%;
+        }
     }
 
     &--slide {
@@ -51,11 +63,12 @@
         line-height: 100%;
     }
 
-    &--weight {
+    &--intro {
         font-weight: 600;
-        font-size: 46px;
         line-height: 100%;
-        text-align: center;
-        color: #22253b;
+    }
+    &--description-box {
+        font-weight: 400;
+        line-height: 94%;
     }
 }

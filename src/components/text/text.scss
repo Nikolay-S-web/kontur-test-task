@@ -11,7 +11,20 @@
 
     &--about-item {
         line-height: 115%;
-        text-align: center;
+    }
+
+    &--banner {
+        line-height: 144%;
+        @media (max-width: 768px) {
+            line-height: 150%;
+        }
+    }
+
+    &--description-box {
+        line-height: 156%;
+        @media (max-width: 768px) {
+            line-height: 142%;
+        }
     }
 
     &--size_l {
@@ -19,13 +32,17 @@
     }
     &--size_m {
         font-size: 16px;
-        line-height: 144%;
         @media (max-width: 768px) {
             font-size: 12px;
-            line-height: 150%;
         }
     }
     &--size_s {
         font-size: 13px;
+        @media (max-width: 1024px) {
+            font-size: 11px;
+        }
+        @media (max-width: 425px) {
+            font-size: 9px;
+        }
     }
 }

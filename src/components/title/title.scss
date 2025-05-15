@@ -1,4 +1,5 @@
 .title {
+    font-family: var(--font-family);
     text-wrap: balance;
     color: var(--primaryTextColor);
 
@@ -70,5 +71,11 @@
     &--description-box {
         font-weight: 400;
         line-height: 94%;
+    }
+    &--footer {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 119%;
+        color: var(--secondTextColor, #8e8e8e);
     }
 }

@@ -1,5 +1,5 @@
 .link {
-    // font-family: var(--font-family);
+    font-family: var(--font-family);
     text-decoration: none;
 
     &--style_usual {
@@ -19,5 +19,28 @@
             line-height: 164%;
             text-align: center;
         }
+    }
+
+    &--mail {
+        font-size: 16px;
+        line-height: 144%;
+        color: var(--primaryTextColor, #22253b);
+    }
+
+    &--policy {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 144%;
+        color: var(--secondTextColor, #8e8e8e);
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
+    }
+
+    &--icon {
+        display: block;
+    }
+    &--logo {
+        display: block;
     }
 }

@@ -27,6 +27,15 @@
         }
     }
 
+    &--policy {
+        color: var(--secondTextColor, #8e8e8e);
+    }
+    &--copy {
+        &::before {
+            content: '\00A9\0020';
+        }
+    }
+
     &--size_l {
         font-size: 20px;
     }

@@ -7,7 +7,7 @@ import { sentryVitePlugin } from '@sentry/vite-plugin';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import htmlPurge from 'vite-plugin-purgecss';
-// import { ghPages } from 'vite-plugin-gh-pages';
+import { ghPages } from 'vite-plugin-gh-pages';
 
 export default defineConfig({
     build: {
@@ -48,9 +48,9 @@ export default defineConfig({
                 quality: 80,
             },
         }),
-        // ghPages({
-        //     branch: 'gh-pages',
-        // }),
+        ghPages({
+            branch: 'gh-pages',
+        }),
     ],
     css: {
         postcss: {

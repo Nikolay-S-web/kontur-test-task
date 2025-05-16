@@ -8,6 +8,5 @@ $(document).ready(function () {
 
 galaryItems.forEach((galaryItem) => {
     const src = galaryItem.querySelector('.galary__image').src;
-    console.log(src);
     galaryItem.setAttribute('href', src);
 });

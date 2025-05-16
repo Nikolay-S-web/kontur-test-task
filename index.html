@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>kontur-test-task</title>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=1fbcab78-afee-4c67-9015-60636be92489&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./src/components/fancybox/fancybox.scss" />
 </head>
 
 <body id="index">
@@ -22,18 +27,18 @@
 
             <nav class="header__navigation navigation">
                 <ul class="navigation__items">
-                    <li class="navigation__item"><a href="" class="link link--style_usual">Чему вы научитесь</a></li>
-                    <li class="navigation__item"><a href="" class="link link--style_usual">Процесс обучения</a></li>
-                    <li class="navigation__item"><a href="" class="link link--style_usual">Стоимость</a></li>
-                    <li class="navigation__item"><a href="" class="link link--style_usual">Контакты</a></li>
+                    <li class="navigation__item"><a href="" class="link link--style_usual" aria-label="чему вы научитесь">Чему вы научитесь</a></li>
+                    <li class="navigation__item"><a href="" class="link link--style_usual" aria-label="процесс обучения">Процесс обучения</a></li>
+                    <li class="navigation__item"><a href="" class="link link--style_usual" aria-label="стоимость">Стоимость</a></li>
+                    <li class="navigation__item"><a href="" class="link link--style_usual" aria-label="контакты">Контакты</a></li>
                 </ul>
             </nav>
 
-            <a href="tel:+7 (499) 348 93 96" class="header__call_link link link--style_phone">+7 (499) 348 93 96</a>
+            <a href="tel:+7 (499) 348 93 96" class="header__call_link link link--phone" aria-label="контактный телефон">+7 (499) 348 93 96</a>
 
-            <button class="header__burger burger">
+            <button class="header__burger burger" aria-label="развернуть меню">
                 <div class="burger__wrapper">
-                    <div class="burger__line burger-line "></div>
+                    <div class="burger__line burger-line"></div>
                     <div class="burger__line burger-cross">
                         <div class="burger-cross__line burger-cross__line--first"></div>
                         <div class="burger-cross__line burger-cross__line--second"></div>
@@ -61,7 +66,7 @@
                                 <p class="slide-info-call__text text text--size_m text--banner">
                                     Закажите звонок, и наш специалист свяжется с вами в ближайшее время
                                 </p>
-                                <button class="slide-info-call__button button button--call">
+                                <button class="slide-info-call__button button button--call button--style_primary">
                                     <span class="button__text text text--size_l text--button">Заказать звонок</span>
                                 </button>
                             </div>
@@ -88,7 +93,7 @@
                                 <p class="slide-info-call__text text text--size_m text--banner">
                                     Всё, что вы узнали, вы тут же начинаете применять на практике. Вы сразу видите результаты своего труда.
                                 </p>
-                                <button class="slide-info-call__button button button--call">
+                                <button class="slide-info-call__button button button--call button--style_primary">
                                     <span class="button__text text text--size_l text--button">Заказать звонок</span>
                                 </button>
                             </div>
@@ -115,7 +120,7 @@
                                 <p class="slide-info-call__text text text--size_m text--banner">
                                     Теория и практика подаются маленькими порциями. Так вам будет легче усваивать новые знания.
                                 </p>
-                                <button class="slide-info-call__button button button--call">
+                                <button class="slide-info-call__button button button--call button--style_primary">
                                     <span class="button__text text text--size_l text--button">Заказать звонок</span>
                                 </button>
                             </div>
@@ -131,6 +136,10 @@
                 </article>
 
             </div>
+
+            <div class="swiper-button-prev button button--swiper_prev"></div>
+            <div class="swiper-button-next button button--swiper_next"></div>
+
         </section>
 
         <section class="intro">
@@ -266,11 +275,25 @@
 
         <section class="galary">
             <div class="galary__wrapper">
-                <img src="./src/assets/images/galary__image_1.jpg" alt="" class="galary__image">
-                <img src="./src/assets/images/galary__image_2.jpg" alt="" class="galary__image">
-                <img src="./src/assets/images/galary__image_3.jpg" alt="" class="galary__image">
-                <img src="./src/assets/images/galary__image_4.jpg" alt="" class="galary__image">
-                <img src="./src/assets/images/galary__image_5.jpg" alt="" class="galary__image">
+                <a class="galary__item" data-fancybox="gallery">
+                    <img src="/src/assets/images/galary__image_1.jpg" alt="фото с занятий" class="galary__image" aria-label="фото с занятий">
+                </a>
+
+                <a class="galary__item" data-fancybox="gallery">
+                    <img src="/src/assets/images/galary__image_2.jpg" alt="клавиатура" class="galary__image" aria-label="фото цветной клавиатуры">
+                </a>
+
+                <a class="galary__item" data-fancybox="gallery">
+                    <img src="/src/assets/images/galary__image_3.jpg" alt="фото с занятий" class="galary__image" aria-label="фото с занятий">
+                </a>
+
+                <a class="galary__item" data-fancybox="gallery">
+                    <img src="/src/assets/images/galary__image_4.jpg" alt="фото с занятий" class="galary__image" aria-label="фото с занятий">
+                </a>
+
+                <a class="galary__item" data-fancybox="gallery">
+                    <img src="/src/assets/images/galary__image_5.jpg" alt="фото с занятий" class="galary__image" aria-label="фото с занятий">
+                </a>
             </div>
         </section>
 
@@ -279,13 +302,61 @@
             </div>
         </section>
 
+        <section style="display: none;" id="formModal" class="call_order">
+            <form class="call_order__form form" id="contactForm">
+                <div class="form__wrapper">
+
+                    <h2 class="form__title title title--size_m">Заказать звонок</h2>
+
+                    <fieldset class="form__fields form-fields">
+
+                        <div class="form-fields__item">
+                            <label for="name" class="form-fields__label text text--size_m text--label">Имя</label>
+                            <input id="name" type="text" placeholder="ваше  имя" value="" class="form-fields__input text text--input text--size_l">
+                        </div>
+
+                        <div class="form-fields__item">
+                            <label for="tel" class="form-fields__label text text--size_m text--label">Телефон</label>
+                            <input id="tel" type="tel" placeholder="+7 ХХХ - ХХХ - ХХ -ХХ" value="" class="form-fields__input text text--input text--size_l">
+                        </div>
+                        <div class="form-fields__item">
+                            <label for="email" class="form-fields__label text text--size_m text--label">Email</label>
+                            <input id="email" type="email" placeholder="Email" value="" class="form-fields__input text text--input text--size_l">
+                        </div>
+                        <div class="form-fields__item">
+                            <label for="message" class="form-fields__label text text--size_m text--label">Сообщение</label>
+                            <textarea id="message" type="" placeholder="Ваше сообщение ..." value="" rows="3"
+                                class="form-fields__input form-fields__input--textarea text text--input text--size_l"></textarea>
+                        </div>
+
+
+                    </fieldset>
+
+                    <section class="form__policy policy policy--form">
+
+                        <div class="policy__wrapper">
+                            <p class="policy__copy  text text--size_m text--policy">Нажимая кнопку “Отправить”, соглашаюсь с</p>
+
+                            <a href="" class="policy__link link link--policy link--form" aria-label="политика конфиденциальности">политикой конфиденциальности</a>
+                        </div>
+
+                    </section>
+                    <button type="submit" class="form__button button button--style_primary">
+                        <span class="button__text text text--size_l text--button">Отправить</span>
+                    </button>
+
+                </div>
+
+            </form>
+        </section>
+
     </main>
 
     <footer class="footer">
         <div class="footer__wrapper">
 
             <div class="footer__title_box footer-title_box">
-                <a href="" class="footer__logo link link--logo">
+                <a href="/index.html" class="footer__logo link link--logo" aria-label="логотип компании Код">
                     <svg class="logo">
                         <use xlink:href="/__spritemap#sprite-logo"></use>
                     </svg>
@@ -301,32 +372,32 @@
                     <ul class="sotial_links__wrapper">
 
                         <li class="sotial_links__item">
-                            <a href="" class="sotial_links__link link link--icon">
-                                <svg class="sotial_links__icon icon">
+                            <a href="" class="sotial_links__link link link--icon" aria-label="канал в инстаграмме">
+                                <svg class="sotial_links__icon icon icon--sotial">
                                     <use xlink:href="/__spritemap#sprite-sotial_link-insagram"></use>
                                 </svg>
                             </a>
                         </li>
 
                         <li class="sotial_links__item">
-                            <a href="" class="sotial_links__link link link--icon">
-                                <svg class="sotial_links__icon icon">
+                            <a href="" class="sotial_links__link link link--icon" aria-label="канал во вконтакте">
+                                <svg class="sotial_links__icon icon icon--sotial">
                                     <use xlink:href="/__spritemap#sprite-sotial_link-vk"></use>
                                 </svg>
                             </a>
                         </li>
 
                         <li class="sotial_links__item">
-                            <a href="" class="sotial_links__link link link--icon">
-                                <svg class="sotial_links__icon icon">
+                            <a href="" class="sotial_links__link link link--icon" aria-label="канал на фейсбуке">
+                                <svg class="sotial_links__icon icon icon--sotial">
                                     <use xlink:href="/__spritemap#sprite-sotial_link-fb"></use>
                                 </svg>
                             </a>
                         </li>
 
                         <li class="sotial_links__item">
-                            <a href="" class="sotial_links__link link link--icon">
-                                <svg class="sotial_links__icon icon">
+                            <a href="" class="sotial_links__link link link--icon" aria-label="канал на ютьюбе">
+                                <svg class="sotial_links__icon icon icon--sotial">
                                     <use xlink:href="/__spritemap#sprite-sotial_link-youtube"></use>
                                 </svg>
                             </a>
@@ -342,23 +413,23 @@
                 <ul class="footer-navigation__items">
 
                     <li class="footer-navigation__item">
-                        <a href="" class="footer-navigation__link link link--style_usual">Чему вы научитесь</a>
+                        <a href="" class="footer-navigation__link link link--style_usual" aria-label="чему вы научитесь">Чему вы научитесь</a>
                     </li>
 
                     <li class="footer-navigation__item">
-                        <a href="" class="footer-navigation__link link link--style_usual">Процесс обучения</a>
+                        <a href="" class="footer-navigation__link link link--style_usual" aria-label="процесс обучения">Процесс обучения</a>
                     </li>
 
                     <li class="footer-navigation__item">
-                        <a href="" class="footer-navigation__link link link--style_usual">Стоимость</a>
+                        <a href="" class="footer-navigation__link link link--style_usual" aria-label="стоимость обучения">Стоимость</a>
                     </li>
 
                     <li class="footer-navigation__item">
-                        <a href="" class="footer-navigation__link link link--style_usual">Контакты</a>
+                        <a href="" class="footer-navigation__link link link--style_usual" aria-label="контакты">Контакты</a>
                     </li>
 
                     <li class="footer-navigation__item">
-                        <a href="" class="footer-navigation__link link link--style_usual">Регистрация</a>
+                        <a href="" class="footer-navigation__link link link--style_usual" aria-label="регистрация">Регистрация</a>
                     </li>
 
                 </ul>
@@ -366,21 +437,21 @@
 
             <address class="footer__address footer-address">
                 <div class="footer-address__wrapper">
-                    <a href="tel:+79999999999" class="footer-address__phone link link--phone">+7 (999) 999 99 99</a>
-                    <a href="mailto:info@code.ru" class="footer-address__mail link link--mail">info@code.ru</a>
+                    <a href="tel:+79999999999" class="footer-address__phone link link--phone" aria-label="контактный телефон +7 999 999 99 99">+7 (999) 999 99 99</a>
+                    <a href="mailto:info@code.ru" class="footer-address__mail link link--mail" aria-label="адрес электронной почты info@code.ru">info@code.ru</a>
                 </div>
             </address>
 
             <section class="footer__policy policy">
                 <div class="policy__wrapper">
-                    <p class="policy__copy  text text--size_m text--policy text--copy">2023 — Все права защищены</p>
+                    <p class="policy__text  text text--size_m text--policy text--copy">2023 — Все права защищены</p>
 
                     <ul class="policy__items">
                         <li class="policy__item">
-                            <a href="" class="policy__link link link--policy">Пользовательское соглашение</a>
+                            <a href="" class="policy__link link link--policy" aria-label="пользовательское соглашение">Пользовательское соглашение</a>
                         </li>
                         <li class="policy__item">
-                            <a href="" class="policy__link link link--policy">Политика конфиденциальности</a>
+                            <a href="" class="policy__link link link--policy" aria-label="политика конфиденциальности">Политика конфиденциальности</a>
                         </li>
                     </ul>
                 </div>

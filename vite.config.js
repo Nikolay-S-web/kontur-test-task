@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite';
 import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap';
-import htmlPurge from 'vite-plugin-purgecss';
 import autoprefixer from 'autoprefixer';
 import pxtorem from 'postcss-pxtorem';
 import legacy from '@vitejs/plugin-legacy';
 import { sentryVitePlugin } from '@sentry/vite-plugin';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
-import imagePresets, { widthPreset } from 'vite-plugin-image-presets';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import htmlPurge from 'vite-plugin-purgecss';
 // import { ghPages } from 'vite-plugin-gh-pages';
 
 export default defineConfig({
@@ -21,8 +21,12 @@ export default defineConfig({
         sourcemap: true,
     },
     plugins: [
+        htmlPurge({
+            safelist: {
+                standard: [/^fancybox-content$/],
+            },
+        }),
         VitePluginSvgSpritemap('./src/assets/svg/*.svg'),
-        htmlPurge(),
         ViteMinifyPlugin(),
         legacy(),
         sentryVitePlugin({
@@ -32,30 +36,17 @@ export default defineConfig({
                 urlPrefix: '~/',
             },
         }),
-        imagePresets({
-            fullsize: widthPreset({
-                media: '(min-width: 1025px)',
-                class: 'img fullsize',
-                loading: 'eager',
-                widths: [1920, 2880, 3840],
-                formats: {
-                    avif: { quality: 80 },
-                    webp: { quality: 80 },
-                    jpg: { quality: 80 },
-                },
-            }),
-            laptop: widthPreset({
-                media: '(max-width:1024px)',
-                density: 1,
-                class: 'img laptop',
-                loading: 'eager',
-                widths: [1024, 2048, 3072],
-                formats: {
-                    avif: { quality: 80 },
-                    webp: { quality: 80 },
-                    jpg: { quality: 80 },
-                },
-            }),
+        ViteImageOptimizer({
+            exclude: /\.(|svg|)$/i,
+            png: {
+                quality: 100,
+            },
+            jpeg: {
+                quality: 80,
+            },
+            jpg: {
+                quality: 80,
+            },
         }),
         // ghPages({
         //     branch: 'gh-pages',

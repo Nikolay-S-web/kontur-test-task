@@ -1,0 +1,99 @@
+.form {
+    --blockPadding: 80px;
+    --inlinePadding: 53px;
+    @media (max-width: 1024px) {
+        --blockPadding: 50px;
+        --inlinePadding: 30px;
+    }
+    @media (max-width: 768px) {
+        --blockPadding: 30px;
+        --inlinePadding: 24px;
+    }
+    @media (max-width: 425px) {
+        --blockPadding: 20px;
+        --inlinePadding: 20px;
+    }
+
+    &__wrapper {
+        width: 100%;
+
+        background: #fff;
+        padding-block: var(--blockPadding);
+        padding-inline: var(--inlinePadding);
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__fields {
+        margin-block: 46px 16px;
+        @media (max-width: 1024px) {
+            margin-block: 30px 12px;
+        }
+        @media (max-width: 768px) {
+            margin-block: 24px 10px;
+        }
+        @media (max-width: 425px) {
+            margin-block: 16px 8px;
+        }
+    }
+    &-fields {
+        display: grid;
+        row-gap: 24px;
+
+        @media (max-width: 1024px) {
+            row-gap: 20px;
+        }
+        @media (max-width: 768px) {
+            row-gap: 16px;
+        }
+        @media (max-width: 425px) {
+            row-gap: 10px;
+        }
+        &__item {
+            display: grid;
+            row-gap: 16px;
+            @media (max-width: 1024px) {
+                row-gap: 12px;
+            }
+            @media (max-width: 768px) {
+                row-gap: 8px;
+            }
+            @media (max-width: 425px) {
+                row-gap: 6px;
+            }
+        }
+        &__input {
+            border: 1px solid #9f9f9f;
+            border-radius: 10px;
+            padding: 28px 30px;
+            &--textarea {
+                resize: none;
+            }
+
+            @media (max-width: 1024px) {
+                padding: 20px;
+            }
+            @media (max-width: 768px) {
+                padding: 12px;
+            }
+            @media (max-width: 425px) {
+                padding: 8px;
+            }
+        }
+    }
+
+    &__policy {
+        margin-bottom: 25px;
+        @media (max-width: 1024px) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            margin-bottom: 16px;
+        }
+        @media (max-width: 425px) {
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -20,7 +20,6 @@
     }
 
     &__image {
-        // display: block;
         border-radius: 40px;
         max-width: 397px;
         min-height: 234px;
@@ -40,8 +39,6 @@
 
     &__description_box {
         width: 100%;
-        // max-width: 730px;
-        // min-width: 397px;
         @media (min-width: 768px) {
             grid-column-end: span 2;
         }

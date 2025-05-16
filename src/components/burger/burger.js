@@ -1,4 +1,8 @@
 const burger = document.querySelector('.burger');
+
+const defaultLabel = 'развернуть меню';
+const openedLabel = 'закрыть меню';
+
 const parent = burger.parentElement;
 const navigation = parent.querySelector('.navigation');
 
@@ -7,8 +11,13 @@ function burgerCloseHandler() {
     burger.classList.remove('active');
 }
 function burgerToggleHandler() {
+    let label = burger.getAttribute('aria-label');
+
     navigation.classList.toggle('active');
     burger.classList.toggle('active');
+
+    label = defaultLabel ? openedLabel : defaultLabel;
+    burger.setAttribute('aria-label', label);
 }
 
 burger.addEventListener('click', burgerToggleHandler);

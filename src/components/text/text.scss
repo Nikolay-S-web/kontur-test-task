@@ -36,6 +36,15 @@
         }
     }
 
+    &--label {
+        font-weight: 500;
+        color: #000;
+    }
+
+    &--input::placeholder {
+        color: #9f9f9f;
+    }
+
     &--size_l {
         font-size: 20px;
     }

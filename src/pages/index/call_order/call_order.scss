@@ -1,0 +1,13 @@
+.call_order {
+    width: 100%;
+    &__form {
+        --formMaxWidth: 635px;
+        width: 100%;
+        max-width: 635px;
+    }
+}
+
+.fancybox-content:has(.call_order) {
+    width: 635px;
+    padding: 0;
+}

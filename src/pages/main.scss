@@ -5,11 +5,10 @@
     --rootFontSize: 16px;
 
     --iconSize: 30px;
-    --inlinePadding: 15px;
     --inlineWrapperPadding: 120px;
     --wrapperMaxWidth: 1160px;
 
-    // --contentMinWidth: 320px;
+    --contentMinWidth: 320px;
     --pageMaxWidth: calc(var(--inlineWrapperPadding) * 2 + var(--wrapperMaxWidth));
 
     --primaryBgColor: #f9f8fd;
@@ -19,12 +18,10 @@
 
     --altBgColor: #eaf2f5;
 
-    --phoneLinkColor: #38bff2;
+    --secondAccentColor: #38bff2;
     --accentColor: #f15525;
     --buttonColor: var(--accentColor);
-    --buttonActionColor: #38bff2;
 
-    // --font-family: 'Gilroy';
     --font-family: 'Gilroy', system-ui, sans-serif;
 
     @media (max-width: 1400px) {
@@ -61,6 +58,7 @@ body {
 }
 
 .main {
+    position: relative;
     width: 100%;
     margin-inline: auto;
     max-width: var(--pageMaxWidth, 1400px);

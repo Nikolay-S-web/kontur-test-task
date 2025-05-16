@@ -1,5 +1,8 @@
 @use 'swiper/scss';
+
 .banner {
+    --buttonSize: 37px;
+
     overflow: visible;
     &__wrapper {
         max-width: var(--contentMaxWidth);
@@ -8,6 +11,5 @@
     }
     &__slide {
         min-height: 394px;
-        // flex-grow: 1;
     }
 }

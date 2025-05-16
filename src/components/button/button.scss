@@ -1,16 +1,25 @@
 .button {
     --afterSize: 16px;
 
+    --buttonActionColor: var(--secondAccentColor);
     font-family: var(--fontFamily);
     border: unset;
     outline: unset;
     cursor: pointer;
 
-    // width: 265px;
-    // height: 70px;
     background-color: var(--buttonColor, #f15525);
 
-    &--call {
+    &.active {
+        background-color: var(--secondAccentColor, #38bff2);
+    }
+    @media (any-pointer: fine) {
+        transition: 0.3s;
+        &:hover {
+            background-color: var(--secondAccentColor, #38bff2);
+        }
+    }
+
+    &--style_primary {
         font-weight: 400;
         padding-inline: 50px 40px;
         padding-block: 25px;
@@ -27,6 +36,53 @@
             vertical-align: bottom;
         }
     }
-    &__text {
+
+    &--swiper_next,
+    &--swiper_prev {
+        border-radius: 50%;
+        width: var(--buttonSize);
+        height: var(--buttonSize);
+    }
+    &--swiper_prev {
+        left: 24px;
+        @media (max-width: 1024px) {
+            left: 16px;
+        }
+        @media (max-width: 768px) {
+            left: 12px;
+        }
+    }
+    &--swiper_next {
+        right: 24px;
+        @media (max-width: 1024px) {
+            right: 16px;
+        }
+        @media (max-width: 768px) {
+            right: 12px;
+        }
+    }
+
+    &--swiper_prev::after {
+        mask-image: url('/__spritemap#sprite-arrow-left-view');
+    }
+    &--swiper_next::after {
+        mask-image: url('/__spritemap#sprite-arrow-right-view');
+    }
+    &--swiper_next::after,
+    &--swiper_prev::after {
+        background-color: white;
+        content: '';
+        mask-size: 100%;
+        width: 13px;
+        height: 13px;
+        font-size: 0;
+    }
+
+    &.disabled {
+        background-color: white;
+
+        &::after {
+            background-color: var(--primaryTextColor);
+        }
     }
 }

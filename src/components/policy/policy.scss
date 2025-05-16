@@ -1,4 +1,15 @@
 .policy {
+    &--form {
+        & .policy__wrapper {
+            grid-auto-flow: row;
+            padding-block: 0;
+            gap: 0;
+            justify-items: start;
+            &::before {
+                display: none;
+            }
+        }
+    }
     &__wrapper {
         position: relative;
         width: 100%;
@@ -10,17 +21,14 @@
 
         @media (max-width: 1024px) {
             gap: 24px;
-            // grid-template-columns: auto ;
         }
         @media (max-width: 768px) {
             gap: 16px;
             grid-auto-flow: row;
             justify-items: center;
-            // margin-top: 26px;
         }
         @media (max-width: 425px) {
             gap: 10px;
-            // width: 100%;
         }
 
         &::before {
@@ -34,14 +42,12 @@
         }
     }
 
-    &__copy {
+    &__text {
         width: fit-content;
         display: block;
         @media (min-width: 1025px) {
-            // margin-right: auto;
         }
         @media (max-width: 1024px) {
-            // grid-column-end: span 2;
         }
     }
 

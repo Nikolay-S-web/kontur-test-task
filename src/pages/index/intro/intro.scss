@@ -47,7 +47,6 @@
         justify-content: center;
 
         &__item {
-            // max-width: 270px;
             min-width: 145px;
             width: var(--itemWidth);
             @media (max-width: 640px) {
